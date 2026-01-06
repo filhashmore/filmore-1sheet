@@ -723,10 +723,21 @@
         .footer {
             padding: 25px 20px;
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
             align-items: center;
             max-width: 1100px;
             margin: 0 auto;
+        }
+
+        .footer-logo {
+            height: 45px;
+            width: auto;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-logo:hover {
+            opacity: 1;
         }
 
         .mr305-logo {
@@ -738,6 +749,34 @@
 
         .mr305-logo:hover {
             opacity: 1;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent-gold);
+            color: var(--bg-dark);
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(201, 162, 39, 0.3);
+        }
+
+        .download-btn:hover {
+            background: #d4af37;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201, 162, 39, 0.4);
+        }
+
+        .download-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
         }
 
         /* Animations */
@@ -1037,8 +1076,19 @@
         </div>
     </section>
 
-    <!-- Footer with MR305 Logo -->
+    <!-- Footer with Logos and Download Button -->
     <footer class="footer">
+        <a href="https://filmore-1sheet.vercel.app/" target="_blank" rel="noopener">
+            <img src="f-only-white.png" alt="FILMORE" class="footer-logo">
+        </a>
+        
+        <a href="FILMORE_1_SHEET_2025.pdf" download="FILMORE_1_SHEET_2025.pdf" class="download-btn">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+            </svg>
+            DOWNLOAD PDF
+        </a>
+        
         <a href="https://www.mr305.com/" target="_blank" rel="noopener">
             <img src="MR305inc_01.png" alt="MR305 Records" class="mr305-logo">
         </a>
